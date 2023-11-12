@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="ASET/LOVE.png" />
+        <meta name="viewport" content="width=device-width, initial-sclae" />
+        <title>LOVE</title>
+        <link rel="stylesheet" href="styling.css"/>
+    </head>
+    <body>
+        <div class="background">
+          <div class="container">
+            <div class="slideshow-container">
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/1.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="SLIDE/2.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="SLIDE/3.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/4.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/5.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/6.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/7.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/8.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/Hal9.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="SLIDE/10.jpg" style="width:100%">
+                  <div class="text"></div>
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+                <span class="dot" onclick="currentSlide(10)"></span>
+              </div>
+            </div>
+            <div class="img-container">
+              <a href="love.html" class="a-content">
+              <img src="ASET/love_hitam-removebg-preview.png" alt="foto-5" class="icon-love">
+              </a>
+              <p class="title">Love nya di click ya sayangg</p>
+            </div>
+        </div>
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+</script>
+    </body>
+
+
+
+
+</html>
